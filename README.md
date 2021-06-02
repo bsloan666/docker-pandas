@@ -36,7 +36,7 @@ When you're ready to exit the container:
 exit
 ```
 
-You will find pandas module and all of its (Ubuntu) dependencies here:
+You will find pandas module and all of its (Ubuntu) dependencies here in your local area:
 ```
 ls -l local-storage/site-packages
 ```
