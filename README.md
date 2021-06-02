@@ -1,4 +1,4 @@
-Pandas-Docker
+docker-pandas
 =============
 
 A Docker container for apps that use pandas python module in Python3.8
