@@ -8,7 +8,7 @@ A Docker container for apps that use pandas python module in Python3.8
 docker build -t pandas-image .
 
 # Then run the container (replace full path to local-storage with proper path)
-docker run -v /Users/bsloan/swdevl/tag-docker/local-storage:/docker-storage -it pandas-image
+docker run -v ~/docker-pandas/local-storage:/docker-storage -it pandas-image
 ```
 
 Then, once the container is running:
