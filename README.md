@@ -4,6 +4,8 @@ docker-pandas
 A Docker container for apps that use pandas python module in Python3.8
 ----------------------------------------------------------------------
 ```
+mkdir -p /docker-storage/python
+
 # First create the container
 docker build -t pandas-image .
 
@@ -11,32 +13,7 @@ docker build -t pandas-image .
 docker run -v ~/docker-pandas/local-storage:/docker-storage -it pandas-image
 ```
 
-Then, once the container is running:
+You will find a zip file with all of your requirements.txt packages and all of their (Ubuntu) dependencies here in your local area:
 ```
-mkdir -p /docker-storage/site-packages
-pip install pandas -t /docker-storage/site-packages
-```
-
-When that's done you may see that the site-packages directory contains pandas and all dependencies:
-```
-ls -l /docker-storage/site-packages
-```
-
-To verify that pandas imports properly you'll need to set your PYTHONPATH and run python:
-```
-export PYTHONPATH=/docker-storage/site-packages
-python3.8
-
->>> import pandas as pd
->>> exit()
-```
-
-When you're ready to exit the container:
-```
-exit
-```
-
-You will find pandas module and all of its (Ubuntu) dependencies here in your local area:
-```
-ls -l local-storage/site-packages
+ls -l local-storage/python.zip
 ```
