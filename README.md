@@ -4,8 +4,6 @@ docker-pandas
 A Docker container for apps that use pandas python module in Python3.8
 ----------------------------------------------------------------------
 ```
-mkdir -p /docker-storage/python
-
 # First create the container
 docker build -t pandas-image .
 
